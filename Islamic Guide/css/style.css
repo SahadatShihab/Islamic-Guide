@@ -1,0 +1,932 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;600;700;800;900&family=IBM+Plex+Serif:wght@100;200;300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&family=Podkova:wght@400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;600;700;800;900&family=IBM+Plex+Serif:wght@100;200;300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Literata:opsz,wght@7..72,200;7..72,400;7..72,500;7..72,600;7..72,700;7..72,800;7..72,900&family=Open+Sans:wght@300;400;500;600;700&family=Podkova:wght@400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* ========= coomon css part start ========= */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,p,ul,ol{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---------- common css part end ----------- */
+/* =========== var part start ========== */
+:root{
+    --bacground: #000000;
+    --secondary: #937334;
+    --primary : #FFFFFF;
+    --textcolor: #d2d1d1;
+    --ibm-plex: 'IBM Plex Serif', serif;
+    --literata:  'Literata', serif;
+}
+
+/* --------- var part end -------------- */
+/* ========== menu bar start ========== */
+.main_menu{
+    width: 100%;
+    height: 80px;
+    background: #000000d5;
+}
+.menu_fixed{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #1d1d1d;
+    z-index: 999;
+    animation: down 1s linear;
+}
+@keyframes down{
+    from{
+        top: -20%;
+    }
+    to{
+        top: 0;
+    }
+}
+.main_menu ul li a{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--ibm-plex);
+    color: var(--primary) !important;
+    transition: all linear .3s;
+}
+.main_menu ul li a:hover{
+    color: var(--secondary) !important;
+}
+.main_menu ul li a span{
+    color: var(--secondary) !important;
+}
+.navbar_icon{
+    display: flex;
+    gap: 25px;
+}
+.navbar_icon i{
+    font-size: 24px;
+    color: var(--primary);
+    transition: all linear .3s;
+}
+.navbar_icon i:hover{
+    color: var(--secondary) !important;
+}
+
+/* ---------- menu bar part end ----------- */
+/* ========== banner part start ======= */
+#banner{
+    background: url(../images/banner.png);
+    padding: 180px 0px 122px 0px;
+}
+.banner_text h1{
+    width: 438px;
+    font-size: 64px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary);
+}
+.banner_text h1 span{
+    color: var(--secondary);
+}
+.banner_btn{
+    display: flex;
+    gap: 10px;
+    margin-top: 73px;
+}
+.banner_btn_item{
+    display: flex;
+    gap: 5px;
+    width: 200px;
+    height: 50px;
+    border: 2px solid var(--secondary);
+    border-radius: 25px;
+}
+.banner_btn_img{
+    width: 48px;
+    height: 48px;
+    background: var(--bacground) !important;
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner_btn_text h4{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary) !important;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 18px;
+}
+.banner_left_item .one{
+    margin-top: 100px;
+}
+.banner_left_item .two{
+    position: relative;
+}
+.banner_left_item .three{
+    position: absolute;
+     top: 25%;
+     left: 74%;
+}
+.banner_left_part{
+    margin-left: 135px;
+}
+/* --------- banner part end -------- */
+/* ========= about part start ========== */
+#about{
+    background: var(--bacground);
+    padding: 40px 0px;
+}
+.about_text h2{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--ibm-plex);
+    color: var(--primary);
+}
+.line{
+    width: 130px;
+    height: 3px;
+    background: var(--primary);
+    margin-top: 5px;
+}
+.about_img{
+    margin-top: 80px;
+}
+.about_heading p{
+    width: 439px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--textcolor);
+    margin-top: 30px;
+}
+.about_heading h2{
+    font-size: 25px;
+    font-weight: 600;
+    font-family: var(--ibm-plex);
+    color: var(--primary);
+    margin-top: 23px;
+}
+.accordion_part{
+    margin-top: 30px;
+}
+ .accordion-item{
+    margin-top: 30px;
+    width: 500px;
+ }
+ .accordion-header button{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--ibm-plex);
+ }
+ .about_btn{
+    margin-top: 25px;
+ } 
+ .about_btn a{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--ibm-plex);
+    border: 2px solid var(--secondary);
+    padding: 10px 18px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background: var(--secondary);
+    color: var(--primary);
+    transition: all linear .3s;
+ }
+ .about_btn a:hover{
+    background: none;
+ }
+/* ---------- about part end ----------- */
+/* ========== piller part start ========== */
+#pillers{
+    padding: 80px 0px;
+    background: var(--bacground);
+}
+.five_pillers{
+    display: flex;
+    gap: 96px;
+}
+.piller_text h2{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary);
+    text-align: center;
+}
+.piller_text h2 span{
+    color: var(--secondary);
+}
+.first_piller{
+    width: 300px;
+    background: var(--primary);
+    padding: 30px;
+    border-radius: 20px;
+    transition: all linear .2s;
+    
+}
+.first_piller:hover{
+    background:var(--secondary);
+}
+.first_piller img{
+    width: 95px;
+    height: 95px;
+    background: var(--primary);
+    border: 2px solid var(--secondary);
+    border-radius: 50%;
+    padding: 9px;
+    margin-left: 75px;
+    margin-top: -80px;
+    transition: all linear .2s;
+}
+.first_piller:hover img{
+    background: var(--secondary);
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+}
+.first_piller h4{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--bacground);
+    text-align: center;
+    margin-top: 15px;
+    transition: all linear .2s;
+}
+.first_piller:hover h4{
+    font-size: 36px;
+    color: var(--primary);
+    padding: 50px;
+}
+.first_piller h6{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--literata);
+    color: var(--bacground);
+    text-align: justify;
+    margin-top: 18px;
+    transition: all linear .2s;
+}
+.first_piller:hover h6{
+     font-size: 0;
+}
+.five_pillers .piller_no_1{
+    margin-top: 254px;
+}
+.five_pillers .piller_no_2{
+    margin-top: 177px;
+}
+.five_pillers .piller_no_3{
+    margin-top: 127px;
+}
+.five_pillers .piller_no_4{
+    margin-top: 177px;
+}
+.five_pillers .piller_no_5{
+    margin-top: 254px;
+}
+.piller_text_part p{
+    width: 625px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--textcolor);
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ---------- piller part end ----------- */
+/* ======== prayers time start ===== */
+#prayers_time{
+    padding: 50px 0px 86px 0px;
+    background: var(--bacground);
+}
+.prayers_text h2{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary);
+    text-align: center;
+}
+.prayers_text span{
+    color: var(--secondary);
+}
+.prayers_text p{
+    width: 600px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--textcolor);
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+.prayers_date{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 83px;
+}
+.prayers_date_text h5{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--literata);
+    color: var(--textcolor);
+    padding-top: 10px;
+}
+.prayers_date_text h4{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--literata);
+    color: var(--primary);
+    padding-top: 10px;
+}
+.prayers_card{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prayers_card_item{
+    width: 130px;
+    background: var(--primary);
+    border-radius: 15px;
+    text-align: center;
+    padding: 24px;
+    transition: all linear .2s;
+}
+.prayers_card_item:hover{
+  
+    background: url(../images/card_img.png);
+    background-position: center;
+    background-size: cover;
+    scale: 1.1;
+}
+.prayers_card_item h6{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--literata);
+    color: var(--bacground);
+}
+.prayers_card_item:hover h6{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--literata);
+    color: var(--primary);
+    scale: 1.1;
+}
+.prayers_card_item p{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--bacground);
+    padding-top: 10px;
+}
+.prayers_card_item:hover p{
+    font-size: 15px;
+    font-weight: 700;
+    font-family: var(--ibm-plex);
+    color: var(--primary);
+    scale: 1.1;
+}
+
+/* -------- prayers time end ------ */
+/* ======== service part start ======= */
+#service{
+    background: var(--bacground);
+    padding: 57px 0px;
+}
+.service_heading h2{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary);
+    text-align: center;
+}
+.service_heading span{
+    color: var(--secondary);
+}
+.service_heading p{
+    width: 505px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--textcolor);
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+.service_card{
+    margin-top: 60px;
+}
+.card_item{
+    width: 300px;
+    background: var( --bacground);
+    border: 1px solid var(--secondary);
+    padding: 22px;
+    margin-left: 30px;
+    transition: all linear .2s;
+}
+.card_item:hover{
+    box-shadow: 0px 0px 30px 0px var(--secondary);
+    scale: 1.1;
+    border: none;
+}
+.card_item h6{
+    margin-top: 45px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--ibm-plex);
+    color: var(--primary);
+}
+.card_text{
+    display: flex;
+    justify-content: space-between;
+}
+.card_text p{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--primary);
+    margin-top: 11px;
+}
+.card_text .btn{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--secondary);
+     margin-top: 4px;
+     transition: all linear .3s;
+}
+.card_text:hover .btn{
+    background: #937334;
+    color: var(--bacground);
+}
+.card_item_parts{
+    margin-top: 80px;
+}
+/* ------- service part end ------------ */
+/* ======= features part start ===== */
+#features{
+    background: var(--bacground);
+    padding: 70px 0px;
+}
+.features_heading h2{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary);
+    text-align: center;
+}
+.features_heading p{
+    width: 605px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--textcolor);
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+.features_heading span{
+    color: var(--secondary);
+}
+.features_item_part{
+    margin-top: 70px;
+}
+.features_item_card{
+    margin-top: 25px;
+    display: flex;
+    gap: 60px;
+    padding: 10px 0px 30px 25px;
+    box-shadow: 0px 0px 10px 0px var(--secondary);
+    border-top-right-radius: 60px;
+    border-top-left-radius:  60px;
+    border-bottom-left-radius: 60px;
+}
+.features_item_card:hover{
+    box-shadow: 0px 0px 25px 0px var(--secondary);
+}
+.features_item_card .features_part{
+    width: 60px;
+    height: 60px;
+    background: var(--primary);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 57px;
+}
+.features_part h5{
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary);
+}
+.features_text p {
+    width: 380px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--primary);
+    margin-top: 12px;
+}
+.features_img{ 
+    margin-left: 240px;
+}
+.features_img img{
+    width: 305px;
+}
+ 
+/* ------ features part end ------- */
+/* ===== support part start ====== */
+#support{
+    padding: 80px;
+    background: var(--bacground);
+}
+.support_heading h2{
+    width: 303px;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--secondary);
+}
+.support_heading p{
+    width: 595px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--textcolor);
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.support_download{
+    text-align: center;
+    margin-top: 80px;
+}
+.support_download h6{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--ibm-plex);
+    color: var(--primary);
+    margin-top: 20px;
+}
+.map{
+    margin-left: 240px;
+}
+/* -------- support part end ------- */
+/* ====== mission part start ===== */
+#mission{
+    background: var(--bacground);
+    padding: 70px;
+}
+.mission_item{
+    margin-left: 145px;
+}
+.mission_heading{
+    margin-top: 110px;
+}
+.mission_heading h2{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary);
+    margin: 0 auto;
+}
+.mission_heading span{
+    color: var(--secondary);
+}
+.mission_heading p{
+    width: 475px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--textcolor);
+    margin-top: 20px;
+}
+.mission_numbr_part{
+    display: flex;
+    gap: 25px;
+}
+.mission_numbr_part h6{
+    width: 22px;
+    height: 22px;
+    background: var(--primary);
+    border-radius: 50%;
+    text-align: center;
+}
+.mission_numbr_part{
+    margin-top: 25px;
+}
+.mission_numbr_part p{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--ibm-plex);
+    color: var(--primary);
+}
+ 
+/* -------- mission part end ------ */
+/* ======= Donation part start ===== */
+#donation{
+    padding: 70px;
+    background: var(--bacground);
+}
+.donation_heading h2{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary);
+    text-align: center;
+}
+.donation_heading p{
+    width: 540px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--textcolor);
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+.slider_item{
+    margin-top: 70px;
+    margin-left: 70px;
+}
+.item img{
+    width: 300px;
+    position: relative;
+}
+.slider_footer_item{
+    width: 300px;
+    background: var(--primary);
+    border-bottom-right-radius: 10px;
+}
+.slider_footer_item{
+    padding: 40px 20px 15px;
+}
+.slider_text h6{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--bacground);
+}
+.slider_text p{
+    width: 190px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--bacground);
+    margin-top: 8px;
+}
+.slider_text_footer{
+    display: flex;
+    justify-content: space-between;
+}
+.slider_text_footer h5{
+    font-size: 14px;
+    font-weight: 700;
+    font-family: var(--ibm-plex);
+    margin-top: 13px;
+}
+.slider_item ul{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+.slider_item ul .slick-active button{
+    background: var(--primary);
+}
+.slider_item ul li button{
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background: var(--bacground);
+    border: 1px solid var(--secondary);
+}
+.donate_btn{
+    margin-top: 70px;
+    text-align: center;
+}
+.donate_btn a{
+    border: 2px solid var(--secondary);
+    padding: 12px 67px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary);
+    transition: all linear .2s;
+}
+.donate_btn a:hover{
+    background: var(--secondary);
+}
+ 
+/* ------- Donation part end ------- */
+/* ======= apps part start======= */
+#apps{
+    padding: 50px;
+    background: var(--bacground);
+}
+.apps_heading h2{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary);
+    text-align: center;
+}
+.apps_heading span{
+    color: var(--secondary);
+}
+.apps_heading p{
+    width: 645px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--textcolor);
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+.apps_part{
+    text-align: center;
+    margin-top: 70px;
+}
+.apps_part h5{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--secondary);
+    margin-top: 18px;
+}
+.apps_part p{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--primary);
+    margin-top: 18px;
+}
+ 
+/* ------- apps part end -------- */
+/* ====== download part start ===== */
+#downloads{
+    padding: 70px;
+    background: var(--bacground);
+}
+.download_heading h2{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--literata);
+    color: var(--primary);
+    text-align: center;
+}
+.download_heading span{
+    color: var(--secondary);
+}
+.counter_item{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+.counter_part{
+    width: 95px;
+    height: 95px;
+    background: var(--primary);
+    border: 4px solid var(--secondary);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.counter_part .count{
+    font-size: 36px;
+    font-weight: 400;
+    font-family: var(--literata);
+    color: var(--bacground);
+}
+.counter_part span{
+    font-size: 36px;
+    font-weight: 400;
+    font-family: var(--literata);
+    color: var(--bacground);
+}
+.counter_box{
+    margin-top: 20px;
+    display: flex;
+    gap: 65px;
+    justify-content: center;
+}
+.counter_box_text{
+    width: 150px;
+    background: var(--primary);
+    padding: 15px 35px; 
+    text-align: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    transition: all linear .3s;
+}
+.counter_box_text:hover{
+    background: var(--bacground);
+    border: 1px solid var(--primary);
+}
+.counter_box_text p{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--literata);
+    color: var(--bacground);
+    transition: all linear .3s;
+}
+.counter_box_text:hover p{
+    color: var(--primary);
+}
+.counter_box_text span{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--ibm-plex);
+    transition: all linear .3s;
+}
+.counter_box_text:hover span{
+    color: var(--primary);
+}
+.counter_box_text span i{
+    font-size: 14px;
+    color: #eba519;
+}
+
+/* ------- downloads part end ------- */
+/* ===== footer part start ===== */
+#footer{
+    padding: 70px 0px 30px 0px;
+    background: var(--bacground);
+}
+.footer_heading{
+    display: flex;
+    justify-content: space-between;
+}
+.footer_logo img{
+    width: 230px;
+}
+.footer_icon img{
+     margin-left: 15px;
+     margin-top: 40px;
+}
+.line2{
+    width: 100%;
+    height: 4px;
+    background: var(--secondary);
+}
+.footer_about{
+    margin-top: 40px; 
+}
+.footer_about_part h4{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: var(--ibm-plex);
+    color: var(--primary);
+}
+.footer_text {
+    margin-top: 18px;
+    margin-bottom: 30px;
+}
+.footer_text p{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--ibm-plex);
+    color: var(--textcolor);
+    padding-top: 10px;
+    transition: all linear .2s;
+}
+.footer_text p:hover{
+    color: var(--secondary);
+}
+.footer_contact_part{
+    display: flex;
+    gap: 10px;
+}
+.copy_right_part p{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--literata);
+    color: var(--primary);
+    margin-top: 25px;
+    text-align: center;
+}
+/* ------ footer part end -------- */
